@@ -14,37 +14,37 @@ import githubLogoWhite from 'assets/illustrations/github_white.png';
 import { IntroWrapper, Details, Thumbnail } from './styles';
 
 export const Intro = () => {
-  const { theme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
 
-  return (
-    <div>
-      <Header />
-      <IntroWrapper as={Container}>
-        <Details theme={theme}>
-          <h1>{greeting}</h1>
-          <h4>{greetingDescription}</h4>
-          <div>
-            <Button as={AnchorLink} href="#contact" className="hire-me">
-              Hire me
+    return (
+        <div>
+            <Header />
+            <IntroWrapper as={Container}>
+                <Details theme={theme}>
+                    <h1>{greeting}</h1>
+                    <h4>{greetingDescription}</h4>
+                    <div>
+                        <Button as={AnchorLink} href="#contact" className="hire-me">
+                            Hire me
             </Button>{' '}
-            <a href={cvLink} target="_blank" rel="noreferrer">
-              <Button className="view-cv">View CV</Button>
-            </a>
-          </div>
-          <div className="social">
-            {' '}
-            <a href={linkedinUrl} target="_blank" rel="noreferrer">
-              <img width="45" src={theme === 'light' ? linkedinLogo : linkedinLogoWhite} alt="Linkedin" />
-            </a>
-            <a href={githubUrl} target="_blank" rel="noreferrer">
-              <img width="45" src={theme === 'light' ? githubLogo : githubLogoWhite} alt="GitHub" />
-            </a>
-          </div>
-        </Details>
-        <Thumbnail>
-          <img src={heroImage} alt="Crio.Do" />
-        </Thumbnail>
-      </IntroWrapper>
-    </div>
-  );
+                        <a href={cvLink} target="_blank" rel="noreferrer">
+                            <Button className="view-cv">View CV</Button>
+                        </a>
+                    </div>
+                    <div className="social">
+                        {' '}
+                        <a href={linkedinUrl} target="_blank" rel="noreferrer">
+                            <img width="45" src={theme === 'light' ? linkedinLogo : linkedinLogoWhite} alt="Linkedin" />
+                        </a>
+                        <a href={githubUrl} target="_blank" rel="noreferrer">
+                            <img width="45" src={theme === 'light' ? githubLogo : githubLogoWhite} alt="GitHub" />
+                        </a>
+                    </div>
+                </Details>
+                <Thumbnail>
+                    <img src={heroImage} alt="Crio.Do" />
+                </Thumbnail>
+            </IntroWrapper>
+        </div>
+    );
 };
